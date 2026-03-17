@@ -20,13 +20,11 @@ fn main() {
 	let pairs_args = &args[1..];
 
 	if pairs_args.is_empty() || pairs_args.len() % 2 != 0 {
-		eprintln!(
-			"Usage: mf-control <inst|48v|monitor> <on|off> [<inst|48v|monitor> <on|off> ...]"
-		);
+		eprintln!("Usage: mf-cli <inst|48v|monitor> <on|off> [<inst|48v|monitor> <on|off> ...]");
 		eprintln!("Examples:");
-		eprintln!("  mf-control inst on");
-		eprintln!("  mf-control 48v on monitor off");
-		eprintln!("  mf-control inst on 48v on monitor off");
+		eprintln!("  mf-cli inst on");
+		eprintln!("  mf-cli 48v on monitor off");
+		eprintln!("  mf-cli inst on 48v on monitor off");
 		std::process::exit(1);
 	}
 
