@@ -1,3 +1,8 @@
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (c) 2026 Pavel Olizko <contact@nolight.dev>
+ * Copyright (c) 2026 sleebu <contact@sleebu.dev>
+ */
 #include <linux/fs.h>
 #include <linux/miscdevice.h>
 #include <linux/module.h>
@@ -86,5 +91,6 @@ static void __exit mf_exit(void) { misc_deregister(&mf_misc); }
 module_init(mf_init);
 module_exit(mf_exit);
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("sleebu");
+MODULE_AUTHOR("Pavel Olizko <contact@nolight.dev>");
+MODULE_AUTHOR("sleebu <contact@sleebu.dev>");
 MODULE_DESCRIPTION("Bypass usbfs to send control commands to Arturia MiniFuse");

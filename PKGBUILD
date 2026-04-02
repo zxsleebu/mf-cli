@@ -1,11 +1,12 @@
 # Maintainer: Pavel Olizko <contact@nolight.dev>
+# Contributor: sleebu <contact@sleebu.dev>
 pkgname=mf-cli
 pkgver=0.2.0
 pkgrel=1
 pkgdesc="CLI tool and seamless kernel module for Arturia MiniFuse 1/2"
 arch=('x86_64')
 url="https://github.com/nolight132/mf-cli"
-license=('MIT')
+license=('MIT' 'GPL2')
 depends=('glibc' 'gcc-libs' 'libusb' 'systemd-libs' 'dkms')
 makedepends=('cargo')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
