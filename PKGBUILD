@@ -35,4 +35,7 @@ package() {
 
   # 3. Automatically update the version in dkms.conf to match pkgver
   sed -i "s/^PACKAGE_VERSION=.*/PACKAGE_VERSION=\"$pkgver\"/" "$dkms_dir/dkms.conf"
+
+  # 4. Install the modules-load.d entry for the DKMS module
+  echo "minifuse_mod" | install -Dm644 /dev/stdin "$pkgdir/usr/lib/modules-load.d/$pkgname.conf"
 }
